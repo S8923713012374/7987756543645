@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Ecológica Verde | Indexador de Links Públicos</title>
+    <meta name="description" content="Indexador sem fins lucrativos de link públicos com curadoria especializada">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
+</head>
+<body>
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar left-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <div class="logo-section">
+                        <img src="assets/logos/logo.png" alt="Ecológica Verde Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1>Ecológica Verde</h1>
+                            <p class="tagline">Indexador de Links Públicos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3 class="nav-title">Navegação</h3>
+                        <ul class="nav-list">
+                            <li class="nav-item active" data-section="sources">
+                                <a href="#" class="nav-link" data-section="sources">
+                                    <span class="nav-icon">📚</span>
+                                    <span class="nav-text">Catálogos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-section="guides">
+                                <a href="#" class="nav-link" data-section="guides">
+                                    <span class="nav-icon">📖</span>
+                                    <span class="nav-text">Guias</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-section="utilities">
+                                <a href="#" class="nav-link" data-section="utilities">
+                                    <span class="nav-icon">🛠️</span>
+                                    <span class="nav-text">Utilitários</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-section="dmca">
+                                <a href="#" class="nav-link" data-section="dmca">
+                                    <span class="nav-icon">⚖️</span>
+                                    <span class="nav-text">DMCA & Direitos Autorais</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-section">
+                        <h3 class="nav-title">Sobre o Projeto</h3>
+                        <div class="project-info">
+                            <p><strong>Ecológica Verde</strong> é um projeto sem fins lucrativos que atua como <strong>indexador de links públicos</strong>. Não hospedamos nenhum conteúdo - apenas organizamos e catalogamos os links disponíveis publicamente.</p>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <div class="social-links-footer">
+                        <a href="https://x.com/Ecologica2Verde" class="social-link-footer" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ecologicaverde/" class="social-link-footer" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://discord.com/invite/ZPbzpcPwFf" class="social-link-footer" target="_blank" title="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        <span>© 2024 Ecológica Verde</span>
+                        <span class="copyright-note">Projeto sem fins lucrativos</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Sources Section -->
+                <section class="content-section active" id="sources-section">
+                    <div class="content-header">
+                        <h2 class="content-title">Catálogos Disponíveis</h2>
+                        <div class="content-stats">
+                            <span class="content-stat">6 catálogos indexados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sources-grid" id="sourcesGrid">
+                        <!-- Sources loaded by JavaScript -->
+                        <div class="loading-state">
+                            <div class="loading-spinner"></div>
+                            <p>Carregando catálogos...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Guides Section -->
+                <section class="content-section" id="guides-section">
+                    <div class="content-header">
+                        <h2 class="content-title">Guias Disponíveis</h2>
+                        <div class="content-stats">
+                            <span class="content-stat">9 guias disponíveis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sources-grid" id="guidesGrid">
+                        <!-- Guides loaded by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Utilities Section -->
+                <section class="content-section" id="utilities-section">
+                    <div class="content-header">
+                        <h2 class="content-title">Utilitários Disponíveis</h2>
+                        <div class="content-stats">
+                            <span class="content-stat">8 utilitários disponíveis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sources-grid" id="utilitiesGrid">
+                        <!-- Utilities loaded by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- DMCA Section -->
+                <section class="content-section" id="dmca-section">
+                    <div class="content-header">
+                        <h2 class="content-title">DMCA & Direitos Autorais</h2>
+                        <div class="content-stats">
+                            <span class="content-stat">Digital Millennium Copyright Act (DMCA) & Direitos Autorais</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dmca-content">
+                        <div class="dmca-card">
+                            <h3><i class="fas fa-balance-scale"></i> Declaração Legal</h3>
+                            <div class="dmca-text">
+                                <p>O projeto <strong>Ecológica Verde</strong> atua exclusivamente como um <strong>indexador de links públicos</strong>. É fundamental compreender nossa posição e responsabilidades:</p>
+                                
+                                <div class="legal-points">
+                                    <div class="legal-point">
+                                        <i class="fas fa-server"></i>
+                                        <div>
+                                            <h5>1. Não Hospedagem de Conteúdo</h5>
+                                            <p>Não hospedamos, armazenamos ou distribuímos qualquer arquivo de jogo, software ou mídia protegida por direitos autorais. Todo o conteúdo referenciado está localizado em servidores de terceiros.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legal-point">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <div>
+                                            <h5>2. Indexação de Links Públicos</h5>
+                                            <p>Atuamos como um catálogo organizador de URLs publicamente disponíveis na internet. Não temos controle sobre o conteúdo hospedado nos catálogos indexados.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legal-point">
+                                        <i class="fas fa-handshake"></i>
+                                        <div>
+                                            <h5>3. Sem Associação com os Catálogos</h5>
+                                            <p>Não temos parceria, afiliação ou associação comercial com nenhum dos catálogos listados. O catálogo "Ecológica Verde" é unicamente uma curadoria organizada de links públicos sem fins lucrativos, e cada catálogo externo opera de forma completamente independente.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legal-point">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <div>
+                                            <h5>4. Suporte aos Desenvolvedores</h5>
+                                            <p>Encorajamos fortemente a compra legal de jogos e suporte aos desenvolvedores. Se você gostou de um jogo, considere adquirir a versão oficial para apoiar o trabalho dos criadores.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legal-point">
+                                        <i class="fas fa-ban"></i>
+                                        <div>
+                                            <h5>5. Remoção de Links (DMCA)</h5>
+                                            <p>Respeitamos os direitos autorais e seguimos o Digital Millennium Copyright Act (DMCA). Proprietários de direitos podem solicitar a remoção de links específicos através do nosso canal de contato.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legal-point">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                            <h5>6. Contato para Questões DMCA</h5>
+                                            <p>Para solicitações de remoção de links ou questões sobre direitos autorais, entre em contato através das nossas redes sociais.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="notice-box">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <div>
+                                        <h5>Aviso Importante</h5>
+                                        <p>Este projeto é mantido sem fins lucrativos e tem como objetivo facilitar o acesso a informações já disponíveis publicamente. O uso dos catálogos listados é de inteira responsabilidade do usuário final.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Filters -->
+        <aside class="sidebar right-sidebar filters-sidebar" id="filtersSidebar">
+            <div class="sidebar-content">
+                <!-- Título "Filtros" removido conforme solicitado -->
+                
+                <!-- Barra de Pesquisa Adicionada -->
+                <div class="search-container">
+                    <input type="text" 
+                           class="search-input" 
+                           id="searchInput" 
+                           placeholder="Pesquisar catálogo...">
+                </div>
+                
+                <div class="filters-content">
+                    <div class="filter-section">
+                        <h4 class="filter-section-title">Ordenar por</h4>
+                        <div class="filter-options">
+                            <button class="filter-option active" data-sort="name">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Nome (A-Z)</span>
+                            </button>
+                            <button class="filter-option" data-sort="status">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Status dos Catálogos</span>
+                            </button>
+                            <button class="filter-option" data-sort="recommended">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Mais Recomendado</span>
+                            </button>
+                            <button class="filter-option" data-sort="games">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Mais Jogos</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4 class="filter-section-title">Tipo de Conteúdo</h4>
+                        <div class="filter-options">
+                            <button class="filter-option active" data-type="all">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Todos</span>
+                            </button>
+                            <button class="filter-option" data-type="repacks">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Repacks</span>
+                            </button>
+                            <button class="filter-option" data-type="gog">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">GOG Games</span>
+                            </button>
+                            <button class="filter-option" data-type="online">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Multiplayer Online</span>
+                            </button>
+                            <button class="filter-option" data-type="folder">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Game Folder</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4 class="filter-section-title">Status dos Catálogos</h4>
+                        <div class="filter-options">
+                            <button class="filter-option active" data-status="all">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Todos</span>
+                            </button>
+                            <button class="filter-option" data-status="trusted">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Confiável</span>
+                            </button>
+                            <button class="filter-option" data-status="verified">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Seguro para Usar</span>
+                            </button>
+                            <button class="filter-option" data-status="risk">
+                                <span class="option-bullet"></span>
+                                <span class="option-text">Com Risco</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filters-footer">
+                    <button class="reset-filters" id="resetFilters">
+                        <i class="fas fa-redo"></i>
+                        <span>Limpar Filtros</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
