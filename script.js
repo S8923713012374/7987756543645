@@ -27,7 +27,7 @@ const CONFIG = {
     sourceSafetyLinks: {
         'byxatab': 'https://www.urlvoid.com/scan/byxatab.com/',
         'dodi': 'https://www.urlvoid.com/scan/dodi-repacks.site/',
-        'ecologica': 'https://www.urlvoid.com/scan/ecologica2verde.vercel.app/',
+        'ecologica': 'https://www.urlvoid.com/scan/ecologica2verde.pages.dev/',
         'fitgirl': 'https://www.urlvoid.com/scan/fitgirl-repacks.site/',
         'gog': 'https://www.urlvoid.com/scan/freegogpcgames.com/',
         'onlinefix': 'https://www.urlvoid.com/scan/online-fix.me/'
