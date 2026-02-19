@@ -1,4 +1,3 @@
-// ===== CONFIGURAÇÃO =====
 const CONFIG = {
     statusLabels: {
         'trusted': { label: 'Confiável', class: 'status-trusted', icon: 'fa-shield-alt' },
@@ -16,12 +15,12 @@ const CONFIG = {
     },
     
     sourceUrls: {
-        'byxatab': '#',
-        'dodi': '#',
-        'ecologica': '#',
-        'fitgirl': '#',
-        'gog': '#',
-        'onlinefix': '#'
+        'byxatab': 'https://byxatab.pages.dev/',
+        'dodi': 'https://dodi.pages.dev/',
+        'ecologica': 'https://ecologica2verde.pages.dev/',
+        'fitgirl': 'https://ecofitgirl.pages.dev/',
+        'gog': 'https://freepcgoggames.pages.dev/',
+        'onlinefix': 'https://onlinefixme.pages.dev/'
     },
     
     sourceSafetyLinks: {
@@ -185,7 +184,6 @@ const CONFIG = {
     ]
 };
 
-// ===== ESTADO =====
 let state = {
     sources: [],
     filteredSources: [],
@@ -200,7 +198,6 @@ let state = {
     isChangingSection: false
 };
 
-// ===== INICIALIZAÇÃO =====
 document.addEventListener('DOMContentLoaded', async () => {
     await initializeApp();
     setupEventListeners();
@@ -227,7 +224,6 @@ async function initializeApp() {
             cons: (source.cons || []).slice(0, 3)
         }));
         
-        // Ordenar alfabeticamente por padrão
         state.sources.sort((a, b) => a.name.localeCompare(b.name));
         
         state.filteredSources = [...state.sources];
@@ -239,7 +235,6 @@ async function initializeApp() {
     }
 }
 
-// ===== NAVEGAÇÃO COM ANIMAÇÃO DOS FILTROS =====
 function setupNavigation() {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -292,7 +287,6 @@ function setupNavigation() {
     });
 }
 
-// ===== ATUALIZAR VISIBILIDADE DO SCROLLBAR =====
 function updateScrollbarVisibility() {
     const sections = ['sources', 'guides', 'utilities', 'dmca'];
     
@@ -308,7 +302,6 @@ function updateScrollbarVisibility() {
     });
 }
 
-// ===== SETUP FILTER LISTENERS =====
 function setupFilterListeners() {
     const filterOptions = document.querySelectorAll('.filter-option');
     filterOptions.forEach(button => {
@@ -449,14 +442,12 @@ function resetFilters() {
     applyFilters();
 }
 
-// ===== SETUP EVENT LISTENERS =====
 function setupEventListeners() {
     if (state.currentSection === 'sources') {
         setupFilterListeners();
     }
 }
 
-// ===== RENDERIZAÇÃO =====
 function renderSources() {
     const grid = document.getElementById('sourcesGrid');
     if (!grid) return;
@@ -532,7 +523,7 @@ function renderSources() {
                 </div>
                 <div class="games-count">
                     <i class="fas fa-gamepad"></i>
-                    <span>${source.gameCount || 0} Jogos</span>
+                    <span>${source.gameCount.toLocaleString('pt-BR')} Jogos</span>
                 </div>
                 <div class="stars">
                     ${getStarsHTML(source.stars)}
@@ -540,10 +531,10 @@ function renderSources() {
             </div>
             
             <div class="card-actions">
-                <button class="btn btn-primary" onclick="handleAccessSource('${source.id}')">
+                <a href="${source.url}" class="btn btn-primary" target="_blank">
                     <i class="fas fa-external-link-alt"></i>
                     Acessar Catálogo
-                </button>
+                </a>
             </div>
         </article>
     `}).join('');
@@ -563,7 +554,6 @@ function getStarsHTML(rating) {
     return stars;
 }
 
-// ===== LOAD GUIDES =====
 function loadGuides() {
     const grid = document.getElementById('guidesGrid');
     if (!grid) return;
@@ -604,7 +594,6 @@ function loadGuides() {
     setupCardEffects();
 }
 
-// ===== LOAD UTILITIES =====
 function loadUtilities() {
     const grid = document.getElementById('utilitiesGrid');
     if (!grid) return;
@@ -620,17 +609,11 @@ function loadUtilities() {
         return;
     }
     
-    // Ordenar utilitários manualmente para garantir a ordem correta
     const sortedUtilities = CONFIG.utilities.sort((a, b) => {
-        // FMHY sempre primeiro
         if (a.id === 'fmhy') return -1;
         if (b.id === 'fmhy') return 1;
-        
-        // r/Piracy Megathread sempre segundo
         if (a.id === 'piracy-megathread') return -1;
         if (b.id === 'piracy-megathread') return 1;
-        
-        // Resto em ordem alfabética
         return a.title.localeCompare(b.title);
     });
     
@@ -659,7 +642,6 @@ function loadUtilities() {
     setupCardEffects();
 }
 
-// ===== CARD EFFECTS =====
 function setupCardEffects() {
     const cards = document.querySelectorAll('.source-card, .guide-card, .utility-card');
     
@@ -675,7 +657,6 @@ function setupCardEffects() {
     });
 }
 
-// ===== HANDLERS =====
 function handleAccessSource(sourceId) {
     const source = state.sources.find(s => s.id === sourceId);
     
@@ -752,7 +733,6 @@ function closeModal() {
     if (modal) modal.remove();
 }
 
-// ===== UTILITIES =====
 function showError(message, section) {
     const grid = document.getElementById(`${section}-section`).querySelector('.sources-grid');
     if (grid) {
@@ -825,7 +805,6 @@ function showNotification(title, message, type = 'info') {
     }, 5000);
 }
 
-// ===== GLOBAL FUNCTIONS =====
 window.handleAccessSource = handleAccessSource;
 window.showSourceDetails = showSourceDetails;
 window.closeModal = closeModal;
