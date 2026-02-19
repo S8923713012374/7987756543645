@@ -7,7 +7,6 @@
       "filename": "ByXATAB",
       "description": "Site russo conhecido por lançamentos de Repacks e Game Folders, lançamentos de qualidade e instalação rápida. Excelente conteúdo focalizado em Russo e Inglês.",
       "status": "trusted",
-      "gameCount": 4003,
       "lastUpdated": "",
       "url": "https://byxatab.pages.dev/",
       "csvColumns": ["Nome", "Version", "Build", "Tamanho do Arquivo", "URL", "Data da Postagem"],
@@ -29,7 +28,6 @@
       "filename": "DODI Repack",
       "description": "Repacks de jogos de alta qualidade com foco em compressão e confiabilidade. Conhecido por Repacks de instalação rápida e segura, com um launcher com design peculiar.",
       "status": "trusted",
-      "gameCount": 3217,
       "lastUpdated": "",
       "url": "https://dodi.pages.dev/",
       "csvColumns": ["Nome", "Tamanho do Arquivo", "URL", "Data de Postagem"],
@@ -51,7 +49,6 @@
       "filename": "Ecológica Verde",
       "description": "Jogos curados diretamente pela equipe da Ecológica Verde com foco em qualidade, compatibilidade e segurança. Fontes verificadas e organizadas manualmente, sem nenhuma utilização de Web Scraping.",
       "status": "verified",
-      "gameCount": 184,
       "lastUpdated": "",
       "url": "https://ecologica2verde.pages.dev/",
       "csvColumns": ["Nome", "Version", "Build", "URL", "Data da Postagem"],
@@ -73,7 +70,6 @@
       "filename": "FitGirl Repack",
       "description": "<b>THE Repacker</b>. Excelente qualidade, compressão e total confiabilidade.",
       "status": "trusted",
-      "gameCount": 4152,
       "lastUpdated": "",
       "url": "https://ecofitgirl.pages.dev/",
       "csvColumns": ["Nome", "Version", "Tamanho do Arquivo", "URL", "Data de Postagem"],
@@ -95,7 +91,6 @@
       "filename": "FreePCGOGGames",
       "description": "Jogos sem DRM da plataforma GOG, preservados com todo o conteúdo bônus. Foco na qualidade e segurança.",
       "status": "trusted",
-      "gameCount": 1876,
       "lastUpdated": "",
       "url": "https://freepcgoggames.pages.dev/",
       "csvColumns": ["Nome", "Version", "Tamanho do Arquivo", "URL", "Data da Postagem"],
@@ -117,7 +112,6 @@
       "filename": "OnlineFixMe",
       "description": "Correções e Suporte Online para jogos Multiplayer da Steam, Epic Games e Servidores Dedicados. Excelente qualidade e confiabilidade, conhecido por 'joguei 5000 horas de spacewar na Steam'.",
       "status": "trusted",
-      "gameCount": 2634,
       "lastUpdated": "",
       "url": "https://onlinefixme.pages.dev/",
       "csvColumns": ["Nome", "Version", "Build", "Funciona em Servidores Oficiais", "Tamanho do Arquivo", "Senha", "URL", "Data de Postagem"],
@@ -135,7 +129,7 @@
   ],
   "stats": {
     "totalSources": 6,
-    "totalGames": 16066,
+    "totalGames": 0,
     "lastUpdated": "2024-01-15"
   }
 }

@@ -195,7 +195,8 @@ let state = {
     },
     currentSection: 'sources',
     filtersInitialized: false,
-    isChangingSection: false
+    isChangingSection: false,
+    gameCounts: {}
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -210,10 +211,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function initializeApp() {
     try {
-        const response = await fetch('sources.json');
-        const data = await response.json();
+        const [sourcesResponse, gameCountsResponse] = await Promise.all([
+            fetch('sources.json'),
+            fetch('games-count.json')
+        ]);
         
-        state.sources = data.sources.map(source => ({
+        const sourcesData = await sourcesResponse.json();
+        const gameCountsData = await gameCountsResponse.json();
+        
+        state.gameCounts = gameCountsData;
+        
+        state.sources = sourcesData.sources.map(source => ({
             ...source,
             type: CONFIG.sourceTypes[source.id]?.type || 'other',
             icon: CONFIG.sourceTypes[source.id]?.icon || 'fa-gamepad',
@@ -221,7 +229,8 @@ async function initializeApp() {
             url: CONFIG.sourceUrls[source.id] || '#',
             safetyLink: CONFIG.sourceSafetyLinks[source.id] || '#',
             pros: (source.pros || []).slice(0, 3),
-            cons: (source.cons || []).slice(0, 3)
+            cons: (source.cons || []).slice(0, 3),
+            gameCount: state.gameCounts[source.id] || 0
         }));
         
         state.sources.sort((a, b) => a.name.localeCompare(b.name));
